@@ -1,23 +1,35 @@
-# Casino Breakout (Deluxe Edition)
+# Casino Breakout (Python Edition)
 
-A lightweight browser prototype that turns the pitch into an actual playable 2D side-scroller. Run the single-page app locally and move Cole through each room while dodging hazards, punching goons, and making the big slot win.
+A terminal-friendly stealth escape game written in `main.py`. Slip through a neon casino, collect enough cash to bribe the getaway driver, and dodge patrolling guards, drones, and hazards on every turn.
 
-## How to run
-1. Open `index.html` in any modern browser (no build step needed).
-2. Use a 960x540 viewport or larger for the intended layout.
+## How to play
+1. Run the game with Python 3:
+   ```bash
+   python main.py
+   ```
+2. Use the controls below to navigate the grid and reach the exit `E` with **at least $10**.
 
 ## Controls
-- Move: ← → (or A / D)
-- Jump: ↑ (or W)
-- Crouch: ↓ (or S)
-- Sprint: Hold Shift
-- Punch: E or Space
-- Interact: F
+- `W/A/S/D` — Move up/left/down/right
+- `Q/E/Z/C` — Diagonal moves for tighter dodges
+- `R` — Rest to regain stamina and a bit of HP
+- `F` — Gamble your current cash for a risky payout
+- `X` — Quit mid-run
 
-## Features
-- Nine-scene chase from the parking lot through the alleyway finale.
-- Slot hall win that boosts the money counter to $1,000,000 and spawns Charlie & AJ in pursuit.
-- Hazards, lasers, slippery buffet floors, and crouch-to-duck lounge beams.
-- Boss encounter in the bathroom with individual HP bars for Charlie and AJ.
-- HUD with HP, stamina, money, wanted meter, and a mini-map marking the current room.
-- Dialogue and tutorial popups that adapt to each scene.
+## Map legend
+- `@` — You, the runner
+- `C` — Security guards; `G` — Guard captain; `D` — Drones
+- `$` — Cash pickups; `+` — Med kits; `^` — Slippery hazard that hurts
+- `E` — Exit; `#` — Walls; `.` — Walkable floor
+
+## Goal and systems
+- Escape through `E` while carrying **$10 or more**.
+- Health, stamina, and wanted level are shown as ASCII bars for quick readability.
+- Enemies pursue the player each turn; bumping them triggers a brawl resolved by stamina-weighted dice.
+- Random events introduce camera sweeps, pickpockets, and stray bills to keep runs varied.
+- Resting, gambling, and diagonal movement give you tools to manage risk during the chase.
+
+## Tips
+- Diagonal steps help you slip between drones and walls.
+- Rest before stamina drains to zero, or you will start losing HP each turn.
+- Gambling boosts the wanted level—use it when you can afford the heat.
