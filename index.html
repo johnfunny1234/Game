@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casino Breakout (Deluxe)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hud">
+    <div class="hud-left">
+      <div class="bar">
+        <span>HP</span>
+        <div class="bar-track"><div id="hp-bar" class="bar-fill"></div></div>
+      </div>
+      <div class="bar">
+        <span>Stamina</span>
+        <div class="bar-track"><div id="stamina-bar" class="bar-fill stamina"></div></div>
+      </div>
+      <div class="money">$<span id="money">0</span></div>
+    </div>
+    <div class="hud-right">
+      <div class="mini-map" id="mini-map"></div>
+      <div class="wanted">
+        <span>Wanted</span>
+        <div class="bar-track"><div id="wanted-bar" class="bar-fill wanted"></div></div>
+      </div>
+    </div>
+  </div>
+  <canvas id="game" width="960" height="540"></canvas>
+  <div class="dialogue" id="dialogue"></div>
+  <div class="interaction" id="interaction"></div>
+  <script src="game.js"></script>
+</body>
+</html>
